@@ -1,0 +1,192 @@
+.home-main-main
+{
+    background-color: #1F1F1F;
+}
+.home-main
+{
+    background-color: #1F1F1F;
+    padding : 15px 15px;
+    /* height : 100%; */
+    min-height:100vh;
+    background-size: cover; 
+}
+@media(max-width:440px){
+    .home-main{ padding : 15px 0px }
+}
+
+.sticky-progress-bar
+{
+    position: sticky;
+    position: -webkit-sticky;
+    top : 0;
+}
+
+/* video List css */
+
+.videoList-main
+{
+    margin-top: 10px;
+}
+@media(max-width:440px)
+{
+    .videoList-main{ margin-top: 25px; }
+}
+/*@media(max-width:780px){
+    .videoList-main{ margin-top: 140px; }
+} */
+.videoList-display
+{
+    width: 100%;
+    display : flex;
+}
+.videoList-display:hover
+{
+    cursor: pointer;
+}
+.videoList-image
+{
+    margin : 5px 0px;
+    width : 240px;
+    height : 100px;
+}
+.videoList-info-display
+{
+    width: 80%;
+    padding-top: 5px;
+    padding-left: 10px;
+    display : flex;
+    flex-direction: column;
+}
+.videoList-info-title
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color : white;
+    letter-spacing: 0.4px;
+    line-height: 160%;
+}
+.videoList-info-channel-title
+{
+    padding-top: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color : rgb(170, 166, 166);
+    letter-spacing: 0.4px;
+}
+
+/* main youtube video css */
+
+.video-main
+{
+    margin-top: 15px;
+}
+/* @media(max-width : 440px){
+    .video-main{ margin-top: 140px !important; }
+}
+@media(max-width:780px){
+    .video-main{ margin-top: 140px; }
+} */
+.video-main-info-conatiner
+{
+    padding : 20px 0px;
+}
+.video-main-title
+{
+    padding-top: 18px;
+    font-weight: 600;
+    font-size: 23px;
+    color : rgb(238, 234, 234);
+    letter-spacing: 0.2px;
+}
+.video-main-published-display
+{
+    padding-top: 15px;
+    display : flex;
+}
+.video-main-published
+{
+    padding-top: 9px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color : rgb(146, 143, 143);
+    letter-spacing: 0.4px;
+}
+.video-main-icon-container
+{
+    margin-left: auto;
+}
+.video-main-like-icon
+{
+    width : 25px !important;
+    height : 25px !important;
+    color : grey;
+}
+.video-main-channel-display
+{
+    display : flex;
+}
+.video-main-hr
+{
+    border-top: 1px solid grey;
+}
+.video-main-channel-name
+{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2px;
+    color : rgb(231, 227, 227);
+    letter-spacing: 0.4px;
+}
+.video-main-subscribe-btn
+{
+    border: none;
+    margin-left: auto;
+    border-radius: 4px;
+    padding : 6.5px 15px;
+    height : 35px;
+    background-color: #c00;
+    color : white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+}
+.video-main-subscribe-btn:focus
+{
+    outline: none;
+}
+.video-main-description-name
+{
+    padding-top: 10px;
+    color : rgb(155, 151, 151);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.4px; 
+}
+.video-main-description
+{
+    padding-top: 10px;
+    color : white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.4px; 
+}
+.video-main-show-more-btn
+{
+    margin-top: 15px;
+    border : none;
+    background-color: #1F1F1F;
+    color : rgb(167, 162, 162);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.4px; 
+}
+.video-main-show-more-btn:hover
+{
+    cursor: pointer;
+}
+.video-main-show-more-btn:focus
+{
+    outline: none;
+}

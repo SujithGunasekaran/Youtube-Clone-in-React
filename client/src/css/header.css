@@ -1,0 +1,130 @@
+.header-main
+{
+    background-color: #1F1F1F;
+    width : 100%;
+    /* position: fixed; */
+    padding : 15px 15px;
+    border-bottom: 1px solid rgb(49, 48, 48);
+}
+.header-header-info
+{
+    display : flex;
+    align-items: center;
+}
+.header-logo
+{
+    color : #ff1744 !important;
+    width : 38px !important;
+    height : 38px !important;
+}
+.header-logo-name
+{
+    padding-top: 0.4px;
+    padding-left: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    /* font-family: 'Francois One', sans-serif; */
+    letter-spacing: 0px;
+    font-size: 19px;
+    color : white;
+}
+
+@media(max-width : 440px){
+    .header-main{ padding : 15px 0px }
+}
+
+
+/* Search component css */
+
+.search-container
+{
+    display: flex;
+    align-items: center;
+    margin : 0px 10px;
+    height : 35px;
+    width : 100%;
+}
+.search-container-input-field
+{
+    border : 1px solid #434344;
+    width : 93%;
+    background-color: #020000;
+    border-radius: 3px;
+    padding : 0px 10px;
+    height : 35px;
+    color : rgb(230, 225, 225);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+}
+.search-container-input-field::placeholder
+{
+    color : rgb(134, 131, 131);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    /* font-weight: bold; */
+    letter-spacing: 0.5px;
+}
+.search-container-input-field:focus
+{
+    outline: none;
+}
+.search-icon-container
+{
+    border : none;
+    text-align: center;
+    background-color: #424141;
+    width: 7%;
+    height : 35px;
+}
+.search-container-search-icon
+{
+    color : rgb(151, 148, 148) !important;
+    margin-top: 1px;
+    width : 22px !important;
+    height : 22px !important;
+}
+
+@media(max-width : 440px)
+{
+    .search-container{ margin-top: 19px; margin-bottom: 10px; margin-left: 0px; margin-right: 0px; }
+    .search-container-input-field{ width: 85% !important; }
+    .search-icon-container{ width: 15% !important; }
+}
+@media(max-width : 770px)
+{
+    .search-container{ margin-top: 19px; margin-bottom: 10px; margin-left: 0px; margin-right: 0px; }
+    .search-container-input-field{ width: 90%; }
+    .search-icon-container{ width: 10%; }
+
+}
+
+
+/* avatar css */
+
+.header-avatar-container
+{
+    margin-top: 0.4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-material-icon
+{
+    margin-right: 15px !important;
+    color : white !important;
+    width: 26px !important;
+    height : 26px !important;
+}
+.header-avatar
+{
+    font-size: 15px !important;
+    background-color: rgb(88, 86, 86) !important;
+    width : 34px !important;
+    height: 34px !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
