@@ -17,12 +17,12 @@
  
 # Information
 
- -> To Start Client, Please enter below command in client
+ -> To Start Client, Please enter below command in client folder
 
  ### `npm start`
  
  # build with 🔥
  
   1. `React`
-  2. `node
+  2. `node`
 
