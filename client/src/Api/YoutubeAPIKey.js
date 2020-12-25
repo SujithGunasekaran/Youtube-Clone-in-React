@@ -1,1 +1,1 @@
-export const YoutubeAPIKey = '<<< Your API KEY >>>';
+export const YoutubeAPIKey = '<<< Please Add Your API KEY >>>';
