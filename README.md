@@ -13,7 +13,9 @@
  
   1. Please run the command in both server and client folder to download packages `npm install`
  
-  2. Please add your `Youtube API Key` 
+  2. Please add your `Youtube API Key` in `YoutubeAPIKey.js`
+  
+  3. youtubeAPIKey.js path -> `client/src/Api/`
  
 # Information
 
