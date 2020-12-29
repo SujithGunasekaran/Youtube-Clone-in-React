@@ -3,7 +3,7 @@ import React from 'react';
 
 function VideoList(props){
 
-    const { stringLength, videoList, getVideo } = props;
+    const { stringLength, videoList, setVideoListId } = props;
 
     const dateCalculation = (videoPublishedDate) => {
         var publishedDate = videoPublishedDate.split(/T/g)[0]
@@ -38,9 +38,9 @@ function VideoList(props){
     return(
         <div className="videoList-main">
             {
-                videoList !== undefined && videoList.items.map(( videoInfo, index ) => (
+                videoList !== undefined && videoList.data.items.map(( videoInfo, index ) => (
                     <div key={index} 
-                        onClick={()=>getVideo(videoInfo.id.videoId ? videoInfo.id.videoId : videoInfo.id.playlistId, videoInfo.id.videoId ? "videos" : "playlistItems")}>
+                        onClick={()=>setVideoListId(videoInfo.id.videoId)}>
                         <div className="videoList-display">
                             <img src={ videoInfo.snippet.thumbnails.default.url }  className="videoList-image" alt={videoInfo.snippet.channelTitle}/>
                             <div className="videoList-info-display">
