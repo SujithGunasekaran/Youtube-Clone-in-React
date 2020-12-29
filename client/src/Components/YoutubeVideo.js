@@ -5,7 +5,7 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 function YoutubeVideo(props)
 {    
-    const { videoID, selectedVideo, videoHeight } = props;
+    const { videoID, videoHeight, videoList } = props;
     return(
         <div>
             <div className="video-main">
@@ -18,8 +18,9 @@ function YoutubeVideo(props)
                     allowFullScreen 
                 />
                 {
-                    selectedVideo !== undefined && selectedVideo.items.map(( videoInfo, index ) => (
-                        <div key = { index }>
+                    videoList !== undefined && videoList.data.items.map(( videoInfo, index ) => (
+                        videoInfo.id.videoId === videoID ? 
+                        <div key={ index }>
                             <div className="video-main-title">{ videoInfo.snippet.title }</div>
                             <div className="video-main-published-display">
                                 <div className="video-main-published">Published At : { videoInfo.snippet.publishedAt.split(/T/g)[0] }</div>
@@ -33,7 +34,7 @@ function YoutubeVideo(props)
                                 <div className="video-main-channel-name">{ videoInfo.snippet.channelTitle }</div>
                                 <button className="video-main-subscribe-btn">Subscribe</button>
                             </div>
-                        </div>
+                        </div> : null
                     ))
                 }
             </div>
