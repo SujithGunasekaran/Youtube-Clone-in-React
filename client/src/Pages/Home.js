@@ -1,6 +1,6 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Header from '../Components/Header';
-import { YoutubeAPI, YoutubeVideoAPI } from '../Api/YoutubeAPI';
+import { YoutubeAPI } from '../Api/YoutubeAPI';
 import { YoutubeAPIKey } from '../Api/YoutubeAPIKey';
 import VideoSizeList from '../json/videoSize.json';
 import ProgressBar from '../Components/ProgressBar';
@@ -13,7 +13,6 @@ function Home(){
   
     const [ searchValue, setSearchValue ] = useState('');
     const [ videoList, setVideoList ] = useState()
-    const [ selectedVideo, setSelectedVideo ] = useState();
     const [ stringLength, setStringLength ] = useState(45);
     const [ videoHeight, setVideoHeight ] = useState();
     const [ videoID, setVideoID ] = useState('');
@@ -44,56 +43,14 @@ function Home(){
           key : YoutubeAPIKey
         }
       })
-      .then((responseData) =>{
-        getVideo(responseData.data.items[1].id.videoId, "videos")
-           setShowProgressBar(false)
-        return responseData.data
-      })
-      .catch((err)=>{
-            setShowProgressBar(false)
-        console.log(err)
-      })
+      .finally(() => { setShowProgressBar(false) })
+      setVideoListId(result.data.items[1].id.videoId)
       setVideoList(result)
     }
-
-    const getVideo = async (videoId,videoType) =>{
+  
+    const setVideoListId = (videoId) => {
       window.scrollTo({ top : 0, behavior : 'smooth' })
-      setShowProgressBar(true)
       setVideoID(videoId)
-      if(videoType === 'videos'){
-        await YoutubeVideoAPI.get(`/${videoType}`,{
-          params : {
-            part : 'snippet',
-            id : videoId,
-            key : YoutubeAPIKey
-          }
-        })
-        .then((responseData) => {
-          setShowProgressBar(false)
-          setSelectedVideo(responseData.data)
-        })
-        .catch((err)=>{
-          setShowProgressBar(false)
-          console.log(err)
-        })
-      }
-      else if(videoType === 'playlistItems'){
-        await YoutubeVideoAPI.get(`/${videoType}`,{
-          params : {
-            part : 'snippet',
-            playlistId : videoId,
-            key : YoutubeAPIKey
-          }
-        })
-        .then((responseData) => {
-          setShowProgressBar(false)
-          setSelectedVideo(responseData.data)
-        })
-        .catch((err)=>{
-          setShowProgressBar(false)
-          console.log(err)
-        })
-      }
     }
 
     const handleSearch = (e) =>{
@@ -127,7 +84,7 @@ function Home(){
                     <Suspense fallback={<div>Loading...</div>}>
                       <YoutubeVideo 
                         videoID = { videoID }
-                        selectedVideo = { selectedVideo }
+                        videoList = { videoList }
                         videoHeight = { videoHeight }
                       />
                     </Suspense>
@@ -137,7 +94,7 @@ function Home(){
                       <VideoList 
                         videoList = { videoList }
                         stringLength = { stringLength }
-                        getVideo = { getVideo }
+                        setVideoListId = { setVideoListId }
                       />
                     </Suspense>
                   </div>
