@@ -11,6 +11,3 @@ export const YoutubeAPI = axios.create({
     }
 })
 
-export const YoutubeVideoAPI = axios.create({
-    baseURL : 'https://www.googleapis.com/youtube/v3',
-})
