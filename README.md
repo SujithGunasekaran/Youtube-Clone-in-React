@@ -24,7 +24,8 @@
  ### `npm start`
  
  # build with 🔥
- 
-  1. `React`
-  2. `node`
+  
+  1. `Javascript`
+  2. `React`
+  3. `node`
 
